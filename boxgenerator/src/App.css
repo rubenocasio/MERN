@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.App-body {
+  margin: 0 auto;
+  width: 400px;
+  color: black;
+}
+
+.container {
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}

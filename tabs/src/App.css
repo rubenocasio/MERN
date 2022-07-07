@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.container {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Box {
+  padding: 5px;
+  border: 1px solid dashed;
+}
+
+.on {
+  margin: 15px;
+  padding: 5px;
+  border: 5px solid Green;
+  cursor: pointer;
+  background: black;
+  transition-property: background;
+  transition-duration: 0.5s;
+}
+
+.off {
+  margin: 15px;
+  padding: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: 0.5s;
+}
