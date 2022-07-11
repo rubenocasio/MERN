@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Pokies() {
+const Pokies = () => {
     const [pokemon, setPokemon] = useState([]);
 
 
