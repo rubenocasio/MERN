@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+.app {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto;
+}
+.navbar {
+  display: flex;
+}
+
+#link-lt {
+  margin-right: 20px;
+}
+
+#link-rt {
+  margin-right: 20px;
+}
+
+.btn-1 {
+  background-color: black;
+  color: white;
+}
+
+.btn-2 {
+  background-color: black;
+  color: white;
+}
