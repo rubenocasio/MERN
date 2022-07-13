@@ -14,11 +14,7 @@ const App = () => {
           />
         </div>
         <div className="navbar">
-          <p>
-            <Link id="link-lt" className="btn btn-success" to="/">
-              Home
-            </Link>
-          </p>
+
         </div>
         <Routes>
           <Route path="/people/:id" element={<People />} />
