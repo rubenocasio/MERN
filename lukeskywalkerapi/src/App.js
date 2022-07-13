@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import People from "./components/people";
+import Starships from "./components/Starships";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <div className="header">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg"
+            alt="Star Wars Logo"
+          />
+        </div>
+        <div className="navbar">
+          <p>
+            <Link id="link-lt" className="btn btn-success" to="/">
+              Home
+            </Link>
+          </p>
+        </div>
+        <Routes>
+          <Route path="/people/:id" element={<People />} />
+          <Route path="/planets/:id" element={<planets />} />
+          <Route path="/starships/:id" element={<Starships />} />
+          {/* <Route path="/people/:id" element={<Luke />} />
+          <Route path="/people/:id" element={<Luke />} />
+          <Route path="/people/:id" element={<Luke />} />
+          <Route path="/people/:id" element={<Luke />} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
