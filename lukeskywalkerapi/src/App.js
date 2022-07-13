@@ -1,7 +1,10 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import People from "./components/people";
-import Starships from "./components/Starships";
-import Vehicles from "./components/Vehicles"
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Form from "./components/Form";
+import People from "./components/People";
+import Planets from "./components/Planets";
+import Films from "./components/Films";
+import Species from "./components/Species";
+
 import "./App.css";
 
 const App = () => {
@@ -15,16 +18,13 @@ const App = () => {
           />
         </div>
         <div className="navbar">
-        
+          <Form />
         </div>
         <Routes>
           <Route path="/people/:id" element={<People />} />
-          <Route path="/planets/:id" element={<planets />} />
-          <Route path="/starships/:id" element={<Starships />} />
-          <Route path="/vehicles/:id" element={<Vehicles />} />
-          {/* <Route path="/people/:id" element={<Luke />} />
-          <Route path="/people/:id" element={<Luke />} />
-          <Route path="/people/:id" element={<Luke />} /> */}
+          <Route path="/planets/:id" element={<Planets />} />
+          <Route path="/films/:id" element={<Films />} />
+          <Route path="/species/:id" element={<Species />} />
         </Routes>
       </BrowserRouter>
     </div>

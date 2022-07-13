@@ -8,7 +8,6 @@ const People = () => {
     const [currentPerson, setCurrentPerson] = useState({});
     const [homeworld, setHomeworld] = useState({});
     const [films, setFilms] = useState({});
-    const [vehicles, setVehicles] = useState({});
     const [species, setSpecies] = useState({});
 
     useEffect(() => {
@@ -21,9 +20,6 @@ const People = () => {
         axios.get(`https://swapi.dev/api/films/${id}/?format=json`)
         .then((response) => setFilms(response.data));
 
-        // axios.get(`https://swapi.dev/api/vehicles/?format=json`)
-        // .then((response) => setVehicles(response.data.results));
-
         axios.get(`https://swapi.dev/api/species/${id}/?format=json`)
         .then((response) => setSpecies(response.data));
 
@@ -33,6 +29,7 @@ const People = () => {
     }, [id]);
 
     return (
+
         <div>
             <h2>{currentPerson.name}</h2><br/>
             <p><b>Birth Year:</b> {currentPerson.birth_year}</p><br/>
@@ -42,7 +39,6 @@ const People = () => {
             <p><b>Height: </b>{currentPerson.height}</p><br/>
             <p><b>Skin Color: </b> {currentPerson.skin_color}</p><br/>
             <p><b>Species: </b>{species.name}</p><br/>
-            <p><b>Vehicle: </b> {vehicles.name} || <b>Model: </b>{vehicles.model} || <b>Vehicle Class:</b> {vehicles.vehicle_class}</p><br/>
             <p><b>Hair Color: </b> {currentPerson.hair_color}</p><br/>
             <p><b>Home Planet: </b>{homeworld.name}</p><br/>
             <p><b>Films: </b>{films.title}</p><br/>
