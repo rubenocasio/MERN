@@ -4,6 +4,7 @@ import People from "./components/People";
 import Planets from "./components/Planets";
 import Films from "./components/Films";
 import Species from "./components/Species";
+import Vehicles from "./components/Vehicles"
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/planets/:id" element={<Planets />} />
           <Route path="/films/:id" element={<Films />} />
           <Route path="/species/:id" element={<Species />} />
+          <Route path="/vehicles/:id" element={<Vehicles />} />
         </Routes>
       </BrowserRouter>
     </div>
