@@ -12,7 +12,7 @@ const People = () => {
 
     useEffect(() => {
         axios.get(`https://swapi.dev/api/people/${id}/?format=json`)
-        .then((response) => {setCurrentPerson(response.data);
+        .then((response) => {console.log(response);setCurrentPerson(response.data);
 
         axios.get(`https://swapi.dev/api/planets/${id}/?format=json`)
         .then((response) => setHomeworld(response.data));
