@@ -1,17 +1,16 @@
+const {faker} = require("@faker-js/faker");
 const express = require("express");
 const app = express();
 const port = 8000;
-// import { faker } from "@faker-js/faker";
-const faker = require("@faker-js/faker");
 
 
 class User {
     constructor() {
-        (this.firstName = faker.name.findName())
-        // (this.lastName = faker.name.lastName()),
-        // (this.phoneNumber = faker.phone.phoneNumber()),
-        // (this.email = faker.internet.email()),
-        // (this.password = faker.internet.password());
+        (this.firstName = faker.name.findName()),
+        (this.lastName = faker.name.firstName()),
+        (this.phoneNumber = faker.phone.phoneNumber()),
+        (this.email = faker.internet.email()),
+        (this.password = faker.internet.password());
     }
 }
 
