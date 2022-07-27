@@ -7,8 +7,7 @@ const Form = () => {
     const [idError, setIdError] = useState("");
     const [query,setQuery] = useState([])
     const [id, setId] = useState("");
-    const navigate = useNavigate(); //The useNavigate hook returns a 
-                                    //function that lets you navigate programmatically
+    const navigate = useNavigate();
     
     useEffect(()=> {
         axios.get(`https://swapi.dev/api/`)
