@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import Products from "../components/Products";
 import ProductsList from "../components/ProductsList";
 
 function Main() {

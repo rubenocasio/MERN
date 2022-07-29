@@ -17,7 +17,7 @@ const ProjectsSchema = new mongoose.Schema({
         type:String,
         required:[true, "Please add a description"],
         minlength:[2, "You need at least 4 characters, idiot!"],
-        maxlength:[3, "Too long did not read."],
+        maxlength:[300, "Too long did not read."],
     }
 }, {timestamps: true})
 
