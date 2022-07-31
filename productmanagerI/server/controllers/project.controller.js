@@ -1,7 +1,7 @@
 const Projects = require("../models/project.model");
 
 module.exports.findAll = (req, res) => {
-    Projects.find().sort()
+    Projects.find().sort("title")
     .then(all => res.json({ project: all }))
     .catch(err => res.json({ message: "Something went wrong with find all", error: err }));
 };

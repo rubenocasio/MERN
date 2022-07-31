@@ -1,13 +1,21 @@
-import Products from "./components/Products"
-import Main from "./views/Main"
+import { BrowserRouter } from "react-router-dom";
+import Products from "./components/Products";
+// import Main from "./views/Main";
+// import Details from "./components/Details"
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Products />
-      <Main path="products/" />
+      <BrowserRouter>
+        <Products />
+        {/* <Main path="products/" />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/api/products/:id" element={<Details />} />
+        </Routes> */}
+      </BrowserRouter>
     </div>
   );
 }

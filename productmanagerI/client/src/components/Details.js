@@ -5,7 +5,7 @@ function Details(props) {
     const [products, setProducts] = useState({})
     
     useEffect(() => {
-        axios.get("http://localhost:8000/api/products/" + props._id)
+        axios.get(`http://localhost:8000/api/products/${props._id}`)
             .then(res => setProducts(res.data))
     }, [props._id])
     return (

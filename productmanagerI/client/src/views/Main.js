@@ -7,7 +7,7 @@ function Main() {
 
   useEffect(() => {
     axios.get("http://localhost:8000/api/products")
-    .then(res => setProducts(res.data))
+    .then(res => setProducts(res.data.projects))
     .catch(err=>console.log("Error", err))
   }, []);
   
