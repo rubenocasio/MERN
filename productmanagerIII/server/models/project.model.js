@@ -10,8 +10,8 @@ const ProjectsSchema = new mongoose.Schema({
     price:{
         type:Number,
         required:[true, "Please add a Price."],
-        // minlength:[3, "You need at least 4 characters, idiot!"],
-        // maxlength:[50, "Too long did not read."],
+        minlength:[3, "You need at least 4 characters, idiot!"],
+        maxlength:[50, "Too long did not read."],
     },
     description:{
         type:String,

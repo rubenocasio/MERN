@@ -3,7 +3,7 @@ import axios from "axios";
 import ProductsList from "../components/ProductsList";
 import Products from "../components/Products";
 
-function Main() {
+function Main(props) {
   const [products, setProducts] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
@@ -15,11 +15,15 @@ function Main() {
     })
     .catch(err=>console.log("Error", err))
   }, []);
-  
+
+    const removeFromDom = (id) => {
+      setProducts(products.filter((products) => products._id !== id));
+    };
+    
   return (
     <div className="list">
       {loaded && <Products products={products} />}
-      {loaded && <ProductsList />}
+      {loaded && <ProductsList removeFromDom={removeFromDom} />}
     </div>
   );
 };

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 
-function Details(props) {
+function Details() {
     const [products, setProducts] = useState({})
     const { id } = useParams();
 
     useEffect(() => {
         axios
-            .get('http://localhost:8000/api/products/' + id)
+            .get(`http://localhost:8000/api/products/${id}`)
             .then((res) => {
                 setProducts(res.data.project);
                 console.log(res.data.project)
@@ -17,9 +17,9 @@ function Details(props) {
     }, [id])
 
     return (
-        <div>
+        <div className='details'>
             <p>Title: {products.title}</p>
-            <p>Price: {products.price.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+            <p>Price: {products.price}</p>
             <p>Description: {products.description}</p>
         </div>
     );
