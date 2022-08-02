@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import Main from "./views/Main";
+import New from "./views/New";
+import Show from "./views/Show";
+import Edit from "./views/Edit";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="appbody">
+        <h1 className="bg-dark text-warning rounded col-3 mx-auto">
+          Favorite Authors
+        </h1>
+        <br />
+        <BrowserRouter>
+          <div className="d-flex justify-content-center text-warning">
+            <Link id="btn5" to="/" className="btn btn-primary">
+              Home
+            </Link>
+            <br />
+            <Link id="btn4" to="/api/authors/new" className="btn btn-primary">
+              Add
+            </Link>
+            <br />
+          </div>
+          <hr />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/api/authors/new" element={<New />} />
+            <Route path="/api/authors/:id/" element={<Show />} />
+            <Route path="/api/authors/update/:id" element={<Edit />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
