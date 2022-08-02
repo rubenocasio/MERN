@@ -17,7 +17,7 @@ module.exports = {
             .catch(err => res.json(err.errors))
     },
     update:(req,res) => {
-        Authors.findOneAndUpdate({_id:req.params.id},req.body,{new:true, useFindAndModify:false})
+        Authors.findOneAndUpdate({_id:req.params.id},req.body,{new:true, useFindAndModify:false, runValidators: true})
             .then(data => res.json({results:data}))
             .catch(err => res.json(err.errors))
     },
