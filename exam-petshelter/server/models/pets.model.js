@@ -5,7 +5,6 @@ const PetSchema = new mongoose.Schema({
         type: String,
         required:[true, "Hey you need a name"],
         minlength:[3, "Need more input."],
-        unique: [true, "This has to be unique please"],
         maxlength:[50, "Too long did not read."],
     },
     type:{
