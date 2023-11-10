@@ -21,10 +21,7 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newSearch = { option: option, id: id };
-        if (
-        newSearch.id.length < 1 ||
-        newSearch.id < 1 ||
-        newSearch.option.length < 1
+        if (newSearch.id.length < 1 || newSearch.id < 1 || newSearch.option.length < 1
         ) {
             setIdError("Please choose a category & positive number please!");
         } else {
@@ -40,9 +37,9 @@ const Form = () => {
 
                     <select className="search-box" defaultValue="" value={option} onChange={e => setOption(e.target.value)}>
                     {
-                        query.map((q,i) => {
+                        query.map((q ,i) => {
                             return (
-                                <option key={i} value={q}>{q}</option>
+                                <option key={i} value={q}> {q} </option>
                             )
                         })
                     }
