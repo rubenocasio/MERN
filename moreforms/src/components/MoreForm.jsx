@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 
 function MoreForm() {
+    
     const [fName, setfName] = useState("");
     const [lName, setlName] = useState("");
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [confirm, setconfirm] = useState("");
+    
 
     return (
         <div>
@@ -13,13 +15,15 @@ function MoreForm() {
             <div className="form-group">
                 <label htmlFor="fName">First Name: </label>
                 <input type="text" className="form-group" onChange={(e)=>setfName(e.target.value)}/>
+
                 {
-                    fName.length > 0 && fName.length < 2 ?<p>must be at least 2 characters</p>:null
+                    fName.length > 0 && fName.length < 2 ? <p>must be at least 2 characters</p> : null
                 }
             </div>
             <div className="form-group">
                 <label htmlFor="lName">Last Name: </label>
                 <input type="text"  onChange={(e)=>setlName(e.target.value)}/>
+
                 {
                     lName.length > 0 && lName.length < 2 ?<p>must be at least 2 characters</p>:null
                 }
@@ -45,10 +49,16 @@ function MoreForm() {
                 <label htmlFor="confirm" >Confirm Password: </label>
                 <input type="password" onChange={(e)=>setconfirm(e.target.value)}/>
                 {
-                    confirm !== "" && password !== confirm ?<p>Password must be the same</p>:null
+                    confirm !== "" && password !== confirm ? <p>Password must be the same</p> : ''
                 }
             </div>
         </form>
+                <p>{fName}</p>
+                <p>{lName}</p>
+                <p>{email}</p>
+                <p>{password}</p>
+                <p>{confirm}</p>
+
         </div>
     )
 }
