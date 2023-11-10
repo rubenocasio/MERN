@@ -9,6 +9,7 @@ const New = (props) => {
     }
     const [author,setAuthor] = useState(initialAuthor);
     const [errors, setErrors] = useState(initialAuthor);
+    
     const navigate = useNavigate();
 
     const handleInputChange = (e) => {

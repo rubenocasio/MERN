@@ -14,7 +14,6 @@ const Main = (props) => {
     },[])
 
     const destroyAuthor = (id) => {
-
         Axios.delete(`http://localhost:8000/api/destroy/author/${id}`)
             .then(res => {
                 console.log(res.data.results)
