@@ -4,6 +4,7 @@ const PersonCard = (props) => {
   const {fn, ln, age, hc} = props.data
   const [birthday, setAge] = useState(age);
   const toggleAge = () => { setAge(birthday + 1) }
+  const reset = () => { setAge(age) }
 
   return (
     <div>
@@ -11,6 +12,7 @@ const PersonCard = (props) => {
       <h3>{birthday}</h3>
       <h3>{hc}</h3>
       <button onClick={toggleAge}>Happy Birthday</button>
+      <button onClick={reset}>Born Today</button>
     </div>
   )
 }
