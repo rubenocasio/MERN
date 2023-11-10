@@ -2,15 +2,15 @@ const sumArrow = (a,b) => {
     return a + b
 }
 
-const addArrow2 = (a,b) => {a + b};
-const subArrow2 = (a, b) => {a - b};
-const divArrow2 = (a, b) => {a / b};
-const mulArrow2 = (a, b) => {a * b};
+const addArrow2 = (a,b) => {return a + b};
+const subArrow2 = (a, b) => {return a - b;};
+const divArrow2 = (a, b) => {return a / b;};
+const mulArrow2 = (a, b) => {return a * b;};
 
-// console.log(addArrow2(10,50)); //60
-// console.log(subArrow2(10, 50)); // -40
-// console.log(divArrow2(10, 50)); // 0.2
-// console.log(mulArrow2(10, 50)); //500
+console.log(addArrow2(10,50)); //60
+console.log(subArrow2(10, 50)); // -40
+console.log(divArrow2(10, 50)); // 0.2
+console.log(mulArrow2(10, 50)); //500
 
 let calculateFoodTotal = (food, tip) => {
     food = prompt("Food total? ")
