@@ -4,16 +4,16 @@ import axios from "axios";
 
 
 const People = () => {
-    const { id } = useParams();
     const [currentPerson, setCurrentPerson] = useState({});
     const [homeworld, setHomeworld] = useState({});
     const [films, setFilms] = useState({});
     const [species, setSpecies] = useState({});
+    
+    const { id } = useParams();
 
     useEffect(() => {
         axios.get(`https://swapi.dev/api/people/${id}/?format=json`)
         .then((response) => {console.log(response);setCurrentPerson(response.data);
-
         axios.get(`https://swapi.dev/api/planets/${id}/?format=json`)
         .then((response) => setHomeworld(response.data));
 
@@ -22,8 +22,8 @@ const People = () => {
 
         axios.get(`https://swapi.dev/api/species/${id}/?format=json`)
         .then((response) => setSpecies(response.data));
-
-        })
+        }
+        )
         .catch((err) => {setCurrentPerson({ error: "These are not the droids you are looking for" });
         });
     }, [id]);
