@@ -9,11 +9,11 @@ class Ninja {
 
     // Create methods
     sayName() {
-        console.log(`Hello, ${this.name}`);
+        console.log(`Hello, my name is ${this.name}`);
     }
 
     showStats() {
-        console.table(`Health: ${this.health}\nSpeed: ${this.speed}\nStrength: ${this.strength}`);
+        console.table(`Health: ${this.health}\n Speed: ${this.speed}\nStrength: ${this.strength}`);
     }
 
     drinkSake() {
@@ -21,12 +21,12 @@ class Ninja {
     }
 }
 
-module.exports = Ninja;
-let ruben = new Ninja("Ruben David Ocasio", 10, 10, 10);
+let ruben = new Ninja("Ruben Ocasio", 10, 10, 10);
 ruben.sayName();
-// ruben.drinkSake();
 ruben.showStats();
-// ruben.sayName();
+ruben.drinkSake();
+ruben.showStats();
+
 ruben.drinkSake();
 ruben.showStats();
 
