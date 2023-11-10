@@ -24,6 +24,8 @@ const Pokemon = () => {
     <div className="btn-holder">
         <button className="btn" onClick={displayList}>Pokemon List</button>
         <button className="btn" onClick={removeList}>Destroy List</button>
+
+        
         <div className="poke-list">
             <ul>
             {displayedList.map((pokemon, i) => {
