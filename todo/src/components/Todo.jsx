@@ -17,9 +17,9 @@ function Todo(props) {
             {props.todoList.map((item, i) => {let checkStatus;
             item.checked ? (checkStatus = "checked") : (checkStatus = "unchecked");
             return (
-        <li key={i}>
+            <li key={i}>
 
-        <input type="checkbox" onClick={() => handleCheck(i)} checked={item.checked} />
+            <input type="checkbox" onClick={() => handleCheck(i)} checked={item.checked} />
 
             <span className={[checkStatus]}>{item.content}</span>
 
