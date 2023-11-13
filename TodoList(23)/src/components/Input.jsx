@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import "../App.css";
+import React, { useState } from "react"
+import "../App.css"
 
 function Input({ onNewItem }) {
-    const [content, setContent] = useState("");
+    const [content, setContent] = useState("")
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         if (content) {
-            onNewItem({ content, checked: false });
-            setContent("");
+            onNewItem({ content, checked: false })
+            setContent("")
         }
     };
 
