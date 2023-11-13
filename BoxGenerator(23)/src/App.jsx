@@ -15,10 +15,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
         <Box boxes={currentBoxes} onNewBox={newBox} />
         <button onClick={handleReset}>Reset</button>
-      </header>
     </div>
   );
 }

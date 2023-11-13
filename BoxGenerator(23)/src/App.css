@@ -2,13 +2,35 @@
     margin: 0;
 }
 
-.App-header {
-    background-color: white;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
+.app {
+    margin: 0 auto;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .App-body {
@@ -29,4 +51,10 @@
     padding: 20px;
     width: 200px;
     height: 150px;
+    margin-right: 5px;
+}
+
+.box-div {
+    display: flex;
+    justify-content: space-evenly;
 }
