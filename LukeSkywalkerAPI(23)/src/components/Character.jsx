@@ -10,6 +10,7 @@ const Character = ({ match }) => {
   useEffect(() => {
     axios.get(`https://swapi.dev/api/people/${id}`)
       .then(response => {
+        console.log(response.data)
         setCharacter(response.data);
       })
       .catch(error => {
@@ -19,7 +20,6 @@ const Character = ({ match }) => {
 
   if (error) {
     return <p>These aren't the droids you're looking for</p>;
-    // Include Obi-Wan Kenobi image here
   }
 
   return (
@@ -27,7 +27,9 @@ const Character = ({ match }) => {
       {character ? (
         <div>
           <h2>{character.name}</h2>
-          {/* Render other character attributes here */}
+          <h2>{character.birth_year}</h2>
+          <h2>{character.eye_color}</h2>
+          <h2>{character.mass}</h2>
         </div>
       ) : (
         <p>Loading...</p>

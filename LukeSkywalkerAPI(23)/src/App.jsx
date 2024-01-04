@@ -7,11 +7,13 @@ import Planet from './components/Planet';
 function App() {
   return (
     <BrowserRouter>
+      <div className='App'>
         <SearchForm />
-    <Routes>
-          <Route path="/people/:id" element={<Character/>} />
-          <Route path="/planets/:id" element={<Planet/>} />
-    </Routes>
+        <Routes>
+              <Route path="/people/:id" element={<Character/>} />
+              <Route path="/planets/:id" element={<Planet/>} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
